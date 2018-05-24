@@ -1,0 +1,37 @@
+//colors
+$c-light: #fff;
+$c-dark: #000;
+$c-dark2: #333;
+$c-lightGrey: #d1d1d1;
+$c-lightGrey2: #e6e6e6;
+$c-lightgrey3: #fafafa;
+$c-lightGrey4: #f7f7f7;
+$c-lightGrey5: #f0f0f0;
+$c-grey2: #4a5f73;
+$c-grey: #515151;
+$c-grey3: #6c6c6c;
+$c-grey4: #5c7386;
+$c-green: #3e9a43;;
+$c-lightGreen: #6cc071;
+$c-lightGreen2: #5db75f;
+
+
+//globals
+//globals - fonts
+$ff-basic: 'clinica';
+$fs-basic: 1rem;
+$fw-basic: 400;
+$fc-dark2: #333333;
+
+//globals - headers
+$fs-h1: $fs-basic*2;
+$fs-h2: $fs-basic*1.5;
+$fs-h3: $fs-basic*1.2;
+
+//globals - sections and wrappers
+$section-margin: 50px 0;
+$section-padding: 0;
+
+$wrapper-width: 1232px;
+$wrapper-margin: 0;
+$wrapper-padding: 0 32px;

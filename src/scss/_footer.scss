@@ -1,0 +1,61 @@
+.footer {
+  & > .wrapper {
+    padding: $wrapper-padding;
+    max-width: 1400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $c-lightGrey2;
+    padding: 0 40px;
+    @include mq(600) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__items, &__social {
+    display: inline-block;
+    @include mq(600) {
+      display: block;
+      margin: 15px 0;
+    }
+  }
+  &__items {
+    &Box {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 25px;
+      &>a:hover {
+        color: #d1d1d1;
+        fill: #d1d1d1;
+      }
+      @include mq(500) {
+        display: block;
+        margin: 10px 0;
+      }
+      &:first-of-type {
+        margin-right: 0;
+      }
+      &Svg {
+        width: 36px;
+        height: 38px;
+        @include mq(500) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  &__social {
+    &Svg {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      fill: $c-lightGrey;
+      margin: 0 7px;
+      transition: 0.3s;
+      &:hover {
+        fill: $c-dark2;
+      }
+    }
+  }
+}

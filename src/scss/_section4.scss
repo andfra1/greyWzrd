@@ -1,0 +1,166 @@
+.data {
+  background-color: $c-light;
+  padding: 25px;
+  border: 1px solid #f3f3f3;
+  &__info {
+    color: $c-green;
+    font-family: 'clinica';
+    font-size: $fs-basic;
+    line-height: $fs-basic;;
+    margin-bottom: 15px;
+  }
+  &__inputs {
+    &>.row {
+      display: flex;
+      margin: 10px -10px;
+      flex-wrap: wrap;
+      @include mq(650) {
+        margin: 0;
+      }
+      &:first-of-type {
+        .box:nth-child(1) .box__fieldInput {
+          width: 40px;
+          display: block;
+          float: left;
+          margin: 0 3px;
+        }
+        .box:nth-child(2) {
+          width: 112px;
+          & .box__fieldInput {
+            width: 30px;
+            display: block;
+            float: left;
+            margin-right: 15px;
+          }
+        }
+        .box:nth-child(3) {
+          width: 112px;
+          & .box__fieldInput {
+            width: 20px;
+            display: block;
+            float: left;
+            margin: 0 6px;
+          }
+        }
+      }
+      & .box {
+        position: relative;
+        width: 244px;
+        height: 62px;
+        border: 1px solid #f3f3f3;
+        border-bottom: 2px solid #f0f0f0;
+        margin: 0 10px;
+        padding: 10px 13px;
+        @include mq(650) {
+          width: 100%;
+          margin: 10px;
+          min-width: 250px;
+        }
+        &__field {
+          &Svg {
+            width: 35px;
+            height: 32px;
+            display: inline-block;
+            position: relative;
+          }
+          &Label {
+            position: relative;
+            color: #8a8a8a;
+            font-family: 'clinica';
+            font-size: 12px;
+            display: block;
+            &>span {
+              display: none;
+              fill: #5cb65e;
+              width: 10px;
+              height: 7px;
+              margin-left: 5px;
+              float: none !important;
+            }
+            &--ok {
+              color: #5cb65e;
+              fill: #5cb65e;
+              &>span {
+                display: inline-block;
+              }
+            }
+          }
+          img {
+            float: left;
+            margin: 6px 4px 6px 0px;
+            display: block;
+          }
+          span {
+            float: left;
+            line-height: 25px;
+          }
+          &Input {
+            color: #424242;
+            font-family: 'clinica';
+            font-size: $fs-basic;
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid #f0f0f0;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 95px;
+    background-color: #f7f7f7;
+    padding: 0 25px;
+    margin: 25px -25px -25px -25px;
+    @include mq(770) {
+      height: auto;
+    }
+    &Bttn {
+      @include mq(600) {
+        height: auto;
+      }
+      margin: 15px 0;
+    }
+    &Tooltip {
+      padding: 13px 15px;
+      box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
+      background-color: #6cc071;
+      color: $c-light;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      position: relative;
+      margin-right: 30px;
+      font-family: 'clinica';
+      @include mq(770) {
+        width: 200px;
+        margin: 15px 30px 15px 0;
+      }
+      @include mq(600) {
+        display: none;
+      }
+      &:before {
+        @include pseudoAbsolute;
+        left: auto;
+        right: -47px; //border sum: 32px + 15px
+        background-color: transparent;
+        width: 0px;
+        height: 0px;
+        border: 32px solid transparent;
+        border-left: 15px solid #6cc071;
+        @include mq(770) {
+          right: -70px;
+          border: 51px solid transparent;
+          border-left: 20px solid #6cc071;
+        }
+      }
+      small {
+        opacity: 0.75;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+}

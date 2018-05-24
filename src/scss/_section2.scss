@@ -1,0 +1,181 @@
+.domains {
+  border: 1px solid #f3f3f3;
+  &__addDomain {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    padding: 10px 65px 10px 0;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  &__list {
+    &Header {
+      display: flex;
+      border-bottom: 1px solid #f3f3f3;
+      background-color: #f7f7f7;
+      @include mq(770) {
+        display: none;
+      }
+      &Item {
+        padding: 30px 15px;
+        color: #515151;
+        font-family: 'clinica';
+        font-size: $fs-basic;
+        width: 300px;
+        margin-right: 20px;
+        @include mq(1000) {
+          width: 190px;
+        }
+        &:last-child {
+          width: 180px;
+        }
+        &Rwd {
+          display: none;
+          @include mq(770) {
+            display: block;
+            padding: 10px;
+            background-color: #f7f7f7;
+          }
+        }
+      }
+    }
+    &Content {
+      position: relative;
+      display: flex;
+      background-color: #fff;
+      padding: 10px 65px 10px 0;
+      border-bottom: 1px solid #f3f3f3;
+      @include mq(770) {
+        flex-direction: column;
+      }
+      &:nth-child(1) > .domains__listContentRemove{
+        display: none;
+      }
+      &Item {
+        position: relative;
+        margin: 0 10px;
+        width: 300px;
+        border-bottom: 2px solid #f0f0f0;
+        background-color: #fff;
+        &.valid {
+          background-color: #fbfbfb;
+          .domains__inputSvg {
+            display: block;
+          }
+          // &:before {
+          //   @include pseudoAbsolute;
+          //   width: 18px;
+          //   height: 13px;
+          //   fill: green;
+          //   fill: url(#green);
+          //   background-image: url('../../img/svg/check_icon_green.svg');
+          //   left: auto;
+          //   right: 10px;
+          //   top: 50%;
+          //   transform: translate(0, -50%);
+          // }
+        }
+        @include mq(1000) {
+          width: 190px;
+        }
+        @include mq(770) {
+          width: 70%;
+          min-width: 190px;
+          margin: 10px;
+        }
+        &:nth-child(3) {
+          width: 180px;
+        }
+        &Input {
+          position: relative;
+        }
+      }
+      &Remove {
+        position: absolute;
+        padding: 10px 20px;
+        width: 65px;
+        height: 45px;
+        right: 0;
+        border-left: 1px solid #f3f3f3;
+        top: 50%;
+        transform: translate(0, -50%);
+        fill: #5c7386;
+        transition: fill 0.3s;
+        cursor: pointer;
+        @include mq(770) {
+          top: auto;
+          transform: none;
+        }
+        &:hover {
+          fill: red;
+        }
+      }
+    }
+  }
+  &__input {
+    border: 1px solid #f3f3f3;
+    border-bottom: 0;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    &Svg {
+      display: none;
+      position: absolute;
+      right: 10px;
+      width: 18px;
+      height: 13px;
+      fill: green;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    &Btn {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      cursor: text;
+      >* {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &Svg {
+        fill: #b6b6b6;
+        width: 10px;
+        height: 10px;
+        margin: 0 10px;
+      }
+      &Txt {
+        color: #b6b6b6;
+        font-family: 'clinica';
+        font-size: $fs-basic;
+      }
+    }
+    &Field,
+    &Select {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      padding: 10px;
+      color: #515151;
+      font-family: 'clinica';
+      font-size: $fs-basic;
+    }
+    &Field {
+      padding-right: 38px;
+    }
+    &Select {
+      padding: 0 10px;
+      &>option {
+        color: #515151;
+        font-family: 'clinica';
+        font-size: $fs-basic;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 95px;
+    background-color: #f7f7f7;
+    padding: 0 25px;
+  }
+}

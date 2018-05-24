@@ -1,0 +1,9 @@
+$('.domains__inputBtn').click(function(){
+  $('.domains__listContent').first().clone().appendTo('.domains__listWrapper');
+  $('.domains__listContent').last().find('input').val('');
+  $('.domains__listContent').last().find('input').first().focus();
+  $('.domains__listContent').last().find('.box').removeClass('valid').removeClass('error');
+  $('.domains__listContentRemove').click(function(){
+    $(this).parent().remove();
+  });
+});
